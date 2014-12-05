@@ -1,0 +1,22 @@
+
+REPORT TEST - Date:Wed Dec 03 17:33:14 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0

@@ -9,6 +9,7 @@ import org.testng.annotations.BeforeSuite;
 
 import com.seta.automation.config.Config;
 import com.seta.automation.config.Constant;
+import com.seta.automation.utils.Log;
 
 public class InitBrowser {
 
@@ -20,32 +21,25 @@ public class InitBrowser {
 
 	private Config config; 
 
-//	@Parameters({ "browserName", "browserVersion","browserUrl"})
 	@BeforeSuite (alwaysRun = true)
 	public void BeforeSuite()
-//	(String browserName, String browserVersion, String browserUrl) 
 	{
-
-		this.config = Config.getConfig();
-//		DOMConfigurator.configure("log4j.xml");
-//		LogUtils.Log("Init web browser");
-		
+		config = Config.getInstance();
+		System.out.print(config.toString());
 		//set browser
 		if(config.getBrowser().equalsIgnoreCase("Chrome")){
-		    
+			driver = ChromeBrowser.getInstance();
 		}else if(config.getBrowser().equalsIgnoreCase("IE")){
-		    driver = ChromeBrowser.getInstance();
+		    driver = IEBrowser.getInstance();
 		}else {
 			driver = FirefoxBrowser.getInstance();
 		}
 		
-		driver.get(config.getBaseUrl());
+//		driver.get(config.getBaseUrl());
 		
 		driver.manage().timeouts().implicitlyWait(Constant.TIME_WAIT , TimeUnit.SECONDS);
 		
-		driver.manage().window().maximize();
-
-//		MaximizeBrowser();
+		MaximizeBrowser();
 		
 	}
 	

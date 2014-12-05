@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="Create a default account" verbose="1">
+	<parameter name="browserName" value="Firefox" />
+	<parameter name="browserVersion" value="20.0" />
+	<parameter name="browserUrl" value="http://syspro.setacinq.com.vn:8082/Account/Index" />
+	<!-- <test name="Open browser" verbose="1">
+		<classes>
+			<class name="com.seta.automation.browser.OpenBrowser" />
+		</classes>
+	</test>
+	 -->
+	<test name="Create a new account" verbose="2">
+	 	<parameter name="createAccountButton" value=".//*[@id='AccountGrid']/div[1]/div/div[2]/ul/li[5]/a" />
+		<parameter name="pathModel" value="data_input//Xpath//account//newAccount.xml" />
+		<parameter name="pathControl" value="data_input//Xpath//account//DefaultAccountFieldControl.xml" />
+		<parameter name="submitControl" value="xpath_save_button" />
+		<classes>
+			<class name="com.seta.automation.script.syspro.account.AddDefaultAccount" />
+		</classes>
+	</test>
+	
+</suite>

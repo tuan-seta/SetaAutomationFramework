@@ -12,11 +12,11 @@ public abstract class LoadableObject {
 		return map.containsKey(key);
 	}
 	
-	public String getFieldType(String key){
+	public String getType(String key){
 		return map.get(key).getFieldType();
 	}
 	
-	public String getFieldValue(String key){
+	public String getValue(String key){
 		return map.get(key).getFieldValue();
 	}
 	
@@ -31,6 +31,17 @@ public abstract class LoadableObject {
 	
 	public void clear(){
 		map.clear();
+	}
+
+	@Override
+	public String toString() {
+		StringBuffer result = new StringBuffer("(Name;Type;Value)\n");
+		for (String name: map.keySet()){
+			result.append("(" + name);
+			result.append("; " + getType(name));
+			result.append("; " + getValue(name) + ")\n");
+		}
+		return result.toString();
 	}
 }
 

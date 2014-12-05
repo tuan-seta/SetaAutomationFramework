@@ -1,17 +1,16 @@
 package com.seta.automation.config;
 
-import java.io.IOException;
-
 import org.apache.http.util.TextUtils;
 import org.apache.log4j.xml.DOMConfigurator;
 import org.testng.Assert;
 import org.testng.annotations.BeforeSuite;
 
+import com.seta.automation.data.LoadableControl;
 import com.seta.automation.data.LoadableObject;
-import com.seta.automation.data.LoadableProperty;
 
 public class Config {
-	private static Config config;
+	
+	private static Config instance;
 	private String browser;
 	private String domConfigurator;
 	private String baseUrl;
@@ -22,24 +21,30 @@ public class Config {
 	private static final String TAG_DOM_CONFIGURATOR = "DOMConfigurator";
 	private static final String TAG_BASE_URL = "url";
 	
-	public static Config getConfig() {
-		return config;
+	public static Config getInstance() {
+		if(instance == null){
+			loadDefaultConfig();
+		}
+		return instance;
 	}
 	
 	public static void setConfig(Config config) {
-		Config.config = config;
+		Config.instance = config;
 	}
 	
 	@BeforeSuite (alwaysRun = true)
-	public Config loadDefaultConfig() throws IOException {
-		config = loadConfig(DEFAULT_CONFIG_FILE);
-		return config;
+	public static void loadDefaultConfig() {
+		try {
+			instance = loadConfig(DEFAULT_CONFIG_FILE);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
-	private Config loadConfig(String fileName) throws IOException {
+	private static Config loadConfig(String fileName) throws Exception {
 		Config config = new Config();
 
-		LoadableObject data = new LoadableProperty(fileName);
+		LoadableObject data = new LoadableControl(fileName);
 
 		config.setBrowser(data.getValue(TAG_BROWSER));
 		config.setDomConfigurator(data.getValue(TAG_DOM_CONFIGURATOR));
@@ -52,6 +57,7 @@ public class Config {
 		if (!TextUtils.isEmpty(config.getDomConfigurator())) {
 			DOMConfigurator.configure(config.getDomConfigurator());
 		}
+		
 		return config;
 	}
 
@@ -78,4 +84,11 @@ public class Config {
 	public void setBaseUrl(String baseUrl) {
 		this.baseUrl = baseUrl;
 	}
+	
+	@Override
+	public String toString() {
+		return "Config [browser=" + browser + ", domConfigurator="
+				+ domConfigurator + ", baseUrl=" + baseUrl + "]";
+	}
+
 }

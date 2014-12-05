@@ -1,0 +1,247 @@
+2014-11-04 17:55:36,718 INFO  [Log] Email text box found 
+2014-11-04 17:55:38,625 INFO  [Log] Password text box found 
+2014-11-04 17:55:38,890 INFO  [Log] CompanyCode text box found 
+2014-11-04 17:55:39,156 INFO  [Log] Sign In button found 
+2014-12-03 15:35:49,578 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 15:35:49 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 15:35:49,578 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 15:38:15,703 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 15:38:15 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 15:38:15,703 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 15:43:29,015 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 15:43:29 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 15:43:29,015 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 15:44:35,093 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 15:44:35 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 15:44:35,093 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 15:46:55,062 INFO  [Log] Config [browser=Firefox, domConfigurator=log4j.xml, baseUrl=http] 
+2014-12-03 15:47:06,078 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 15:47:06 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 15:47:06,078 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 17:01:41,109 INFO  [Log] Config [browser=Firefox, domConfigurator=log4j.xml, baseUrl=http://192.168.80.122:8005] 
+2014-12-03 17:01:52,375 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 17:01:52 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 17:01:52,375 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 17:02:52,843 INFO  [Log] Config [browser=Firefox, domConfigurator=log4j.xml, baseUrl=http://192.168.80.122:8005] 
+2014-12-03 17:03:03,718 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 17:03:03 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 17:03:03,718 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 17:04:21,000 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 17:04:21 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 17:04:21,000 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 17:05:04,375 INFO  [Log] AfterSuite 
+2014-12-03 17:05:06,328 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 17:05:06 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 17:05:06,328 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 17:12:13,484 INFO  [Log] AfterSuite 
+2014-12-03 17:12:14,781 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 17:12:14 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 17:12:14,781 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 17:14:48,531 INFO  [Log] AfterSuite 
+2014-12-03 17:14:58,781 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 17:14:58 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 17:14:58,781 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-03 17:33:02,187 INFO  [Log] AfterSuite 
+2014-12-03 17:33:14,500 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 03 17:33:14 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 0
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-03 17:33:14,500 INFO  [Log] pathFile = data_output\report_file.txt 

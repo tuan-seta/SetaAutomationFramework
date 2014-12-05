@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="UjazoAutomation" default="runTest" basedir=".">
+	<property name="src" location="src" />
+	  <property name="bin" location="bin" />
+	  <property name="libs" location="libs" />
+	  <property name="suite" location="suite" />
+		
+	  <path id="class.path">
+	    <pathelement location="${libs}/jxl.jar" />
+	  	<pathelement location="${libs}/testng-6.8.jar" />
+	  	<pathelement location="${libs}/dom4j-1.6.1.jar" />
+	  	<pathelement location="${libs}/selenium-server-standalone-2.44.0.jar" />
+	  	<pathelement location="${libs}/junit-4.11.jar" />
+	  	<pathelement location="${libs}/log4j-1.2.13.jar" />
+	    <pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/poi-3.10-FINAL-20140208.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/poi-examples-3.10-FINAL-20140208.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/poi-excelant-3.10-FINAL-20140208.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/poi-ooxml-3.10-FINAL-20140208.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/poi-ooxml-schemas-3.10-FINAL-20140208.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/poi-scratchpad-3.10-FINAL-20140208.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/lib/commons-codec-1.5.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/lib/commons-logging-1.1.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/ooxml-lib/dom4j-1.6.1.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/ooxml-lib/stax-api-1.0.1.jar" />
+		<pathelement location="${libs}/poi-bin-3.10-FINAL-20140208/poi-3.10-FINAL/ooxml-lib/xmlbeans-2.3.0.jar" />
+	    <pathelement location="${bin}" />
+	  </path>
+	  <target name="message">
+	    <echo>---------------------Syspro Automation----------------------</echo>
+	  </target>
+	  <target name="clean">
+	    <delete dir="bin"/>
+	  </target>
+	  <target depends="clean" name="cleanall"/>
+	  <target name="compile" depends="message">
+	    <mkdir dir="bin/classes"/>
+	    <javac srcdir="src" destdir="bin/" includeAntRuntime="no">
+	      <classpath refid="class.path"/>
+	    </javac>
+	  </target>
+	  <taskdef name="testng" classname="org.testng.TestNGAntTask">
+	    <classpath>
+	      <pathelement location="${libs}/testng-6.8.jar"/>
+	    </classpath>
+	  </taskdef>
+	  <target name="runTest" depends="compile">
+	    <mkdir dir="testng_output"/>
+	    <testng outputdir="testng_output" classpathref="class.path">
+			<xmlfileset dir="${suite}" includes="initSuite.xml"/>
+	    </testng>
+	  </target>
+</project>
+

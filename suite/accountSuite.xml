@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	
+<suite name="All Suite" parallel="false" >
+	<suite-files>
+		<suite-file path="tenantLogin.xml"/>
+		<suite-file path="account//AddDefaultAccount.xml"/>
+	</suite-files>
+	
+</suite>

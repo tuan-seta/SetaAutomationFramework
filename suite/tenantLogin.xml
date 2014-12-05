@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+	
+<suite name="Init web browser" parallel="false" >
+	<listeners>
+		<listener class-name="com.seta.automation.listeners.IReporterListener" />
+	</listeners>
+	<parameter name="browserName" value="Firefox" />
+	<parameter name="browserVersion" value="20.0" />
+	<parameter name="browserUrl" value="http://syspro.setacinq.com.vn:8082" />
+	<test name="Open browser" verbose="1">
+		<classes>
+			<class name="com.seta.automation.browser.OpenBrowser" />
+		</classes>
+	</test>
+	<!-- 
+	<test name="Tenant Login (load data from excel file)">
+		<parameter name="pathModel" value="data_input//Excel//TenantData.xlsx" />
+		<parameter name="sheetModel" value="TenantData" />
+		<parameter name="keyRow" value="0" />
+		<parameter name="dataRow" value="1" />
+		<parameter name="pathControl" value="data_input//Excel//TenantControl.xlsx" />
+		<parameter name="sheetControl" value="TenantControl" />
+		<parameter name="controlRow" value="1" />
+		<parameter name="submitControl" value="Submit" />
+		<classes>
+			<class name="com.seta.automation.script.syspro.TenantLoginScript" />
+		</classes>
+	</test>
+	 -->
+	 <test name="Tenant Login" verbose="2">
+		<parameter name="pathModel" value="data_input//Xpath//TenantData.xml" />
+		<parameter name="pathControl" value="data_input//Xpath//TenantControl.xml" />
+		<parameter name="submitControl" value="xpath_login_submit" />
+		<classes>
+			<class name="com.seta.automation.script.syspro.TenantXpathLoginScript" />
+		</classes>
+	</test>
+	
+</suite>
