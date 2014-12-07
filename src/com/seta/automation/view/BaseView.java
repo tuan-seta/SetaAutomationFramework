@@ -1,35 +1,41 @@
 package com.seta.automation.view;
 
-import java.util.Map;
-
 import org.apache.http.util.TextUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.testng.Assert;
 
+import com.seta.automation.script.BaseScript;
 import com.seta.automation.utils.Log;
-import com.seta.automation.data.LoadableObject;
+import com.seta.automation.data.LoadableControl;
+import com.seta.automation.data.LoadableData;
 
-public class BaseView {
+public abstract class BaseView {
 
+	private static final int DELAY_ACTION = 1000;// Milliseconds
+
+	private static final int DEFAULT_TIMEOUT_FINDING_ELEMENT = 2 ;//seconds
+
+	private String viewID;
+	public abstract String getConfigFilePath();
+	
 	private static String TAG = "tag";
 	
 	protected WebDriver driver;
 	
 	//List of control reference on a view page
-	LoadableObject lstControl;
+	LoadableControl controlFields;
 	
 	//ID of submit control
 	String submitControlID = "";
 
-	public BaseView(String xpathFile){
-		LoadXpathData(xpathFile);
-	}
-	
-	public BaseView(String xpathFile, WebDriver driver){
-		LoadXpathData(xpathFile);
+	public BaseView(WebDriver driver){
 		this.driver = driver;
+		
+		LoadControlData(getConfigFilePath());
 	}
 	
 	//Get instance of view
@@ -38,60 +44,92 @@ public class BaseView {
 
 	}
 	
-	//Initiate page view from excel data
-//	public BaseView(String pathModel, String sheetModel, int keyRow, int dataRow) {
-//		LoadExcelData(pathModel, sheetModel, keyRow, dataRow);
-//	}
-//	
-//	//Load control ID from excel file
-//	public void LoadExcelData(String pathModel, String sheetModel, int keyRow, int dataRow) {
-//		LoadableExcel excelData = new LoadableExcel(pathModel, sheetModel, keyRow, dataRow);
-//		this.lstControl = excelData;
-//	}
+	public void populateData(LoadableData testcaseData, boolean clearBeforeSet) throws Exception{
+		for(String fieldName: testcaseData.keySet()){
+			String fieldType = testcaseData.getType(fieldName);
+			String fieldValue = testcaseData.getValue(fieldName);
+			if (!TextUtils.isEmpty(fieldValue)
+					&& controlFields.containsField(fieldName)){
+				WebElement element = scrollTo(fieldValue);
+				if (clearBeforeSet) element.clear();
+				
+				if (fieldType.equalsIgnoreCase(LoadableData.DTAG_INPUT)
+						|| fieldType.equalsIgnoreCase(LoadableData.DTAG_UNIQUE)){
+					fillInputData(fieldName, fieldValue, element);
+				} else if (fieldType.equalsIgnoreCase(LoadableData.DTAG_COMBO)){
+					fillComboData(fieldName, fieldValue, element);
+				} else if (fieldType.equalsIgnoreCase(LoadableData.DTAG_RADIO)){
+					checkRadio(fieldName, element);
+				}
+			}
+		}
+	}
 	
+	private void fillInputData(String fieldName, String fieldValue, WebElement element) throws Exception{
+		Thread.sleep(DELAY_ACTION);
+		element.sendKeys(fieldValue);
+		Log.info(getClass().getSimpleName()
+				+ ": populateData() - Set element < " + fieldName + " > - Input to value of < " + fieldValue + " >");
+	}
+
+	private void fillComboData(String fieldName, String fieldValue, WebElement element) throws Exception{
+		Thread.sleep(DELAY_ACTION);
+		element.sendKeys(fieldValue, Keys.TAB);
+		Log.info(getClass().getSimpleName()
+				+ ": populateData() - Set element < " + fieldName + " > - Combo to value of < " + fieldValue + " >");
+	}
+
+	private void checkRadio(String fieldName, WebElement element) {
+		if (controlFields.getValue(fieldName).equalsIgnoreCase("true")) {
+			element.click();
+			Log.info(getClass().getSimpleName()	+ ": populateData() - Check radio button < " + controlFields.getValue(fieldName) + " >");
+		}
+	}
+
 	//Load control ID from Xpath file 
-	public void LoadXpathData(String filePath) {
-//		LoadableXpath xpathData = new LoadableXpath(filePath);
-//		this.lstControl = xpathData;
+	private void LoadControlData(String fPath) {
+		try {
+			controlFields = new LoadableControl(fPath);
+		} catch (Exception e) {
+			Assert.assertNotNull(controlFields, "Error load file: "
+					+ getConfigFilePath());
+		}
 	}
 	
 	//Get locator by control ID 
-	public By getLocator(String strElement, Object...args) throws Exception {
-
-		// retrieve the specified object from the object list
-		String locator = lstControl.getValue(strElement);
-
-		// extract the locator type and value from the object
-		String locatorType = locator.split(":")[0];
-		String locatorValue = locator.split(":")[1];
-
-		// return a instance of the By class based on the type of the locator
-		// this By can be used by the browser object in the actual test
+	private By getLocator(String strElement, Object...args) throws Exception {
+		
+		// extract the locator type and value from control data field
+		String locatorType = controlFields.getType(strElement);
+		String locatorValue = controlFields.getValue(strElement);
 		locatorValue = String.format(locatorValue, args);
 		
-		if (locatorType.toLowerCase().equals("id"))
+		// return a instance of the By class based on the type of the locator
+		// this By can be used by the browser object in the actual test
+		if (locatorType.toLowerCase().equals(LoadableControl.CTAG_ID))
 			return By.id(locatorValue);
-		else if (locatorType.toLowerCase().equals("name"))
+		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_NAME))
 			return By.name(locatorValue);
-		else if ((locatorType.toLowerCase().equals("classname"))
-				|| (locatorType.toLowerCase().equals("class")))
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_CLASSNAME))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_CLASS)))
 			return By.className(locatorValue);
-		else if ((locatorType.toLowerCase().equals("tagname"))
-				|| (locatorType.toLowerCase().equals("tag")))
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_TAG))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_TAGNAME)))
 			return By.className(locatorValue);
-		else if ((locatorType.toLowerCase().equals("linktext"))
-				|| (locatorType.toLowerCase().equals("link")))
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_LINK))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_LINKTEXT)))
 			return By.linkText(locatorValue);
-		else if (locatorType.toLowerCase().equals("partiallinktext"))
+		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_PARTIALlINKTEXT))
 			return By.partialLinkText(locatorValue);
-		else if ((locatorType.toLowerCase().equals("cssselector"))
-				|| (locatorType.toLowerCase().equals("css")))
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_CSS))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_CSSSELECTOR)))
 			return By.cssSelector(locatorValue);
-		else if (locatorType.toLowerCase().equals("xpath"))
+		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_XPATH))
 			return By.xpath(locatorValue);
 		else
 			throw new Exception("Unknown locator type '" + locatorType + "'");
 	}
+	
 	
 	public void click(String element, Object... args) throws Exception {
 		Log.info(getClass().getSimpleName() + ".click(): " + element);
@@ -103,11 +141,50 @@ public class BaseView {
 		getElement(element).click();
 	}
 	
+	
+	public WebElement scrollTo(String elementName) throws Exception {
+		Log.info(getClass().getSimpleName() + ": scrollTo " + elementName);
+		WebElement element;
+		try {
+			element = getElement(elementName);
+			((JavascriptExecutor) driver).executeScript(
+					"arguments[0].scrollIntoView(true);", element);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+			throw new Exception("error scroll to " + elementName + " cause: "
+					+ e.getMessage());
+
+		}
+		return element;
+	}
+
+	public WebElement scrollTo(String elementName, Object... args) throws Exception {
+		Log.info(getClass().getSimpleName() + ": scrollTo " + elementName);
+		WebElement element;
+		try {
+			element = getElement(elementName, args);
+			((JavascriptExecutor) driver).executeScript(
+					"arguments[0].scrollIntoView(true);",
+					element);
+		} catch (Exception e) {
+
+			e.printStackTrace();
+
+			throw new Exception("error scroll to " + elementName + " cause: "
+					+ e.getMessage());
+
+		}
+		return element;
+	}
+
 	public WebElement getElement(String name, Object... args) throws Exception {
 
 		By locator = getLocator(name, args);
 		return tryFindElement(name, locator);
 	}
+	
 
 	private WebElement getElement(String name) throws Exception {
 
@@ -118,6 +195,8 @@ public class BaseView {
 	
 	private WebElement tryFindElement(String name, By locator) throws Exception {
 		try {
+			Thread.sleep(DELAY_ACTION);
+			BaseScript.setTimeOut(DEFAULT_TIMEOUT_FINDING_ELEMENT);
 			return driver.findElement(locator);
 
 		} catch (Exception e) {
@@ -125,6 +204,8 @@ public class BaseView {
 					+ locator + " class: " + getClass().getSimpleName();
 			Log.error(message);
 			throw new Exception(message);
+		} finally {
+			BaseScript.setDeafaultTimeOut();
 		}
 	}
 	
@@ -145,26 +226,6 @@ public class BaseView {
 	}
 	
 	public String getTag() {
-		return lstControl.getValue(TAG);
+		return controlFields.getValue(TAG);
 	}
-	
-	
-	public void setSubmitControl(String submitControl ){
-		if (lstControl.getValue(submitControl) != null){
-			submitControlID = lstControl.getValue(submitControl);
-		}
-	}
-	
-	public String getSubmitControl(){
-		return submitControlID;
-	}
-	
-	public String getControlID(String controlKey){
-		return lstControl.getValue(controlKey);
-	}
-
-	public void setViewPage(LoadableObject viewPage) {
-		this.lstControl = viewPage;
-	}
-	
 }

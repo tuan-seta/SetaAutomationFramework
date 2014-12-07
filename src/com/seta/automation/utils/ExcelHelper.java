@@ -91,9 +91,7 @@ public class ExcelHelper {
 	
 	private void parseTestcaseData(){
 		int count = getNumOfTestcase();
-		if (count == 0){
-			return;
-		} 
+		if (count == 0) return;
 		
 		Row fieldData;
 		for (int i = 1; i < excelSheet.getPhysicalNumberOfRows(); i++) {

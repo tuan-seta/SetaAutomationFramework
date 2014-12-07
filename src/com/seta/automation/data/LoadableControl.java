@@ -13,7 +13,9 @@ public class LoadableControl extends LoadableObject{
 	public static final String CTAG_ID = "id";
 	public static final String CTAG_NAME = "name";
 	public static final String CTAG_CLASSNAME = "classname";
+	public static final String CTAG_CLASS = "class";
 	public static final String CTAG_TAG = "tag";
+	public static final String CTAG_TAGNAME = "tagname";
 	public static final String CTAG_LINK = "link";
 	public static final String CTAG_LINKTEXT = "linktext";
 	public static final String CTAG_PARTIALlINKTEXT = "partiallinktext";

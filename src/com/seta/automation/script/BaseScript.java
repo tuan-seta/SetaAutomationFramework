@@ -1,5 +1,6 @@
 package com.seta.automation.script;
 
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
@@ -9,6 +10,7 @@ import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.poi.hssf.usermodel.HSSFSheet;
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -20,6 +22,7 @@ import org.openqa.selenium.WebElement;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeTest;
 
 import com.seta.automation.utils.Log;
 import com.seta.automation.browser.ChromeBrowser;
@@ -30,7 +33,9 @@ import com.seta.automation.view.BaseView;
 
 public abstract class BaseScript {
 	
-	protected WebDriver driver;
+	private static final int DEFAULT_TIME_OUT = 10;
+	
+	protected static WebDriver driver;
 	protected String baseUrl;
 	
 	protected BaseView viewPage;
@@ -41,23 +46,27 @@ public abstract class BaseScript {
 	private LinkedHashMap<String, Object[]> result;
 	private FileOutputStream outSteam;
 	
-//	@Parameters({ "browserName", "browserUrl" })
-//	@BeforeSuite
-//	public void BeforeSuite(String browserName, String browserURL) throws Exception  {
-//
-//		// Initiate web driver
-//		GetBrowserInstance(browserName);
-//		
-//		driver.get(browserURL);
-//		
-//		//Initiate output file
-////		outSteam = new FileOutputStream(new File(getOutputFilePath()));
-//		
-//		Thread.sleep(DELAY_TIME);
-//	}
+	@BeforeTest
+	public void beforeTest() throws Exception {
+
+		Config config = Config.getInstance();
+		Log.info(getClass().getName() + ": Before Test");
+
+		if (driver == null) {
+			getBrowserInstance(config.getBrowser());
+		}
+		
+		driver.manage().timeouts()
+				.implicitlyWait(getDeaultTimeOut(), TimeUnit.SECONDS);
+		
+	}
 	
+	private long getDeaultTimeOut() {
+		return DEFAULT_TIME_OUT;
+	}
+
 	//Initiate web driver
-	protected void GetBrowserInstance(String browserName) {
+	protected void getBrowserInstance(String browserName) {
 		if (driver != null)
 			return;
 
@@ -74,64 +83,6 @@ public abstract class BaseScript {
 		driver.get(baseUrl + url);
 		return this;
 	}
-	
-	protected void fillDataToView(){
-//		LogUtils.Log(getClass().getSimpleName() + " - Test : fillData");
-		
-		if(dataModel == null || viewPage == null){
-			//TODO: show message
-			return;
-		}
-		
-		Map<String, String> data = null;
-		
-		if(data.isEmpty() || viewPage == null){
-			return;
-		}
-		else {
-			Set set = data.entrySet();
-			Iterator i = set.iterator();
-
-			//send string data to view page's controls 
-			while(i.hasNext()) {
-				//Get data
-		        Map.Entry me = (Map.Entry)i.next();
-		        String fieldID = (String) me.getKey();
-		        String fieldData = (String) me.getValue();
-		        
-		        //get control ID
-		        if (viewPage.getControlID(fieldID) != null){
-			        String controlID = viewPage.getControlID(fieldID);
-//			        LogUtils.Log(getClass().getSimpleName() + " - fill data control : " + controlID);
-
-		        	//send data to a specified control
-		        	WebElement element = driver.findElement(By.xpath(controlID));
-		        	element.sendKeys(fieldData);
-		        } 
-			}
-		}
-	}
-	
-	
-	//Load control xpath key from xpath file
-	protected void initXpathControl(String pathControl, String submitControl){
-		if(viewPage == null)
-			viewPage = new BaseView(pathControl);
-		else
-			this.viewPage.LoadXpathData(pathControl);
-		
-		this.viewPage.setSubmitControl(submitControl);
-	}
-	
-	//Load control xpath key from excel file 
-//	protected void initExcelControl(String pathControl, String sheetControl, int keyRow, int controlRow, String submitControl){
-//		if(viewPage == null)
-//			viewPage = new BaseView(pathControl, sheetControl, keyRow, controlRow);
-//		else 
-//			viewPage.LoadExcelData(pathControl, sheetControl, keyRow, controlRow);
-//		
-//		this.viewPage.setSubmitControl(submitControl);
-//	}
 	
 	@BeforeMethod
     public void handleBeginMethodName(Method method)
@@ -185,5 +136,14 @@ public abstract class BaseScript {
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
+	}
+	
+	public static void setTimeOut(int timeOut) {
+		driver.manage().timeouts().implicitlyWait(timeOut, TimeUnit.SECONDS);
+	}
+	
+	public static void setDeafaultTimeOut() {
+		driver.manage().timeouts()
+		.implicitlyWait(DEFAULT_TIME_OUT, TimeUnit.SECONDS);
 	}
 }
