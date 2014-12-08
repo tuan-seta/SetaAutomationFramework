@@ -97,6 +97,7 @@ public class ExcelHelper {
 						fieldType = cell.getStringCellValue();
 					} else if (col < count + 2){
 						fieldValue = cell.getStringCellValue();
+						
 					}
 				}
 			}
