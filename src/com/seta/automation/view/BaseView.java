@@ -1,47 +1,75 @@
 package com.seta.automation.view;
 
+import java.util.HashMap;
+
 import org.apache.http.util.TextUtils;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.seta.automation.script.BaseScript;
 import com.seta.automation.utils.Log;
+import com.seta.automation.browser.InitBrowser;
 import com.seta.automation.data.LoadableControl;
 import com.seta.automation.data.LoadableData;
 
 public abstract class BaseView {
 
 	private static final int DELAY_ACTION = 1000;// Milliseconds
-
 	private static final int DEFAULT_TIMEOUT_FINDING_ELEMENT = 2 ;//seconds
+	private static final int DEFAULT_TIMEOUT_LOADING_PAGE = 10 ;//seconds
 
+	//List of control reference on a view page
+	LoadableControl controlFields;
+		
 	private String viewID;
 	public abstract String getConfigFilePath();
+	public abstract String getDefaultURL();
 	
 	private static String TAG = "tag";
 	
 	protected WebDriver driver;
+	private Actions builder;
+	private WebDriverWait driverWait;
+	private static HashMap<String, Object> pageObjectContainer = new HashMap<String, Object>();
 	
-	//List of control reference on a view page
-	LoadableControl controlFields;
-	
-	//ID of submit control
-	String submitControlID = "";
-
-	public BaseView(WebDriver driver){
-		this.driver = driver;
+	public BaseView(){
+		driver = InitBrowser.getDriver();
+		driverWait = new WebDriverWait(driver, DEFAULT_TIMEOUT_LOADING_PAGE);
+		builder = new Actions(driver);
 		
 		LoadControlData(getConfigFilePath());
 	}
 	
+	//Load control fields from properties file 
+	private void LoadControlData(String fPath) {
+		try {
+			controlFields = new LoadableControl(fPath);
+		} catch (Exception e) {
+			Assert.assertNotNull(controlFields, "Error load file: "
+					+ getConfigFilePath());
+		}
+	}
+		
 	//Get instance of view
-	public Object getView(Class<?> viewClass) throws Exception {
-		return viewClass.getConstructor().newInstance();
+	public static Object getView(Class<?> viewClass) throws Exception {
+		Object viewObject = pageObjectContainer.get(viewClass.getName());
+		if (viewObject == null) {
+			viewObject = viewClass.getConstructor().newInstance();
+		}
+		else {
+			WebDriver newReferWebdriver = InitBrowser.getDriver();
+			((BaseView) viewObject).driver = newReferWebdriver;
+			((BaseView) viewObject).driverWait =  new WebDriverWait(newReferWebdriver, 10); 
+			((BaseView) viewObject).builder = new Actions(newReferWebdriver);
+		}
 
+		return viewObject;
 	}
 	
 	public void populateData(LoadableData testcaseData, boolean clearBeforeSet) throws Exception{
@@ -86,15 +114,6 @@ public abstract class BaseView {
 		}
 	}
 
-	//Load control ID from Xpath file 
-	private void LoadControlData(String fPath) {
-		try {
-			controlFields = new LoadableControl(fPath);
-		} catch (Exception e) {
-			Assert.assertNotNull(controlFields, "Error load file: "
-					+ getConfigFilePath());
-		}
-	}
 	
 	//Get locator by control ID 
 	private By getLocator(String strElement, Object...args) throws Exception {
