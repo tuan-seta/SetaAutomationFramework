@@ -28,10 +28,10 @@ public class UnitTestMain {
 	
 	private static void parseExcelData(){
 		String fPath = "input/data/LoginData.xlsx";
-		String sheetName = "LoginMultiTime";
+		String sheetName = "SimpleLoginSuccess";
 		try {
 			ExcelHelper parser = new ExcelHelper(fPath, sheetName);
-			System.out.print(parser.toString());
+			System.out.print(parser.getFirstCase().toString());
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

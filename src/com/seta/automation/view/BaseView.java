@@ -1,6 +1,7 @@
 package com.seta.automation.view;
 
 import java.util.HashMap;
+import java.util.Iterator;
 
 import org.apache.http.util.TextUtils;
 import org.openqa.selenium.By;
@@ -15,13 +16,14 @@ import org.testng.Assert;
 import com.seta.automation.script.BaseScript;
 import com.seta.automation.utils.Log;
 import com.seta.automation.browser.InitBrowser;
+import com.seta.automation.config.Constant;
 import com.seta.automation.data.LoadableControl;
 import com.seta.automation.data.LoadableData;
 
 public abstract class BaseView {
 
 	private static final int DELAY_ACTION = 1000;// Milliseconds
-	private static final int DEFAULT_TIMEOUT_FINDING_ELEMENT = 2 ;//seconds
+	private static final int DEFAULT_TIMEOUT_FINDING_ELEMENT = 1 ;//seconds
 	private static final int DEFAULT_TIMEOUT_LOADING_PAGE = 10 ;//seconds
 
 	//List of control reference on a view page
@@ -43,7 +45,9 @@ public abstract class BaseView {
 		driverWait = new WebDriverWait(driver, DEFAULT_TIMEOUT_LOADING_PAGE);
 		builder = new Actions(driver);
 		
-		LoadControlData(getConfigFilePath());
+		LoadControlData(Constant.CPAGE_DEFAULT_FOLDER + getConfigFilePath());
+		
+		pageObjectContainer.put(getClass().getName(), this);
 	}
 	
 	//Load control fields from properties file 
@@ -59,10 +63,10 @@ public abstract class BaseView {
 	//Get instance of view
 	public static Object getView(Class<?> viewClass) throws Exception {
 		Object viewObject = pageObjectContainer.get(viewClass.getName());
+		
 		if (viewObject == null) {
 			viewObject = viewClass.getConstructor().newInstance();
-		}
-		else {
+		} else {
 			WebDriver newReferWebdriver = InitBrowser.getDriver();
 			((BaseView) viewObject).driver = newReferWebdriver;
 			((BaseView) viewObject).driverWait =  new WebDriverWait(newReferWebdriver, 10); 
@@ -72,13 +76,22 @@ public abstract class BaseView {
 		return viewObject;
 	}
 	
+	public void populateData(Object testcaseData, boolean clearBeforeSet) throws Exception{
+		if (!(testcaseData instanceof LoadableData)){
+			Log.debug("Load url: ");
+			return;
+		}
+		
+		populateData((LoadableData) testcaseData, clearBeforeSet);
+	}
+	
 	public void populateData(LoadableData testcaseData, boolean clearBeforeSet) throws Exception{
 		for(String fieldName: testcaseData.keySet()){
 			String fieldType = testcaseData.getType(fieldName);
 			String fieldValue = testcaseData.getValue(fieldName);
 			if (!TextUtils.isEmpty(fieldValue)
 					&& controlFields.containsField(fieldName)){
-				WebElement element = scrollTo(fieldValue);
+				WebElement element = scrollTo(fieldName);
 				if (clearBeforeSet) element.clear();
 				
 				if (fieldType.equalsIgnoreCase(LoadableData.DTAG_INPUT)
@@ -196,6 +209,16 @@ public abstract class BaseView {
 
 		}
 		return element;
+	}
+	
+	public void moveToElement(String element) throws Exception {
+		builder.moveToElement(getElement(element)).build().perform();
+		Log.info(getClass().getSimpleName() + ": move to  " + element);
+	}
+
+	public void moveToElement(String element, Object... args) throws Exception {
+		builder.moveToElement(getElement(element, args)).build().perform();
+		Log.info(getClass().getSimpleName() + ": move to  " + element);
 	}
 
 	public WebElement getElement(String name, Object... args) throws Exception {

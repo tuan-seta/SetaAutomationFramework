@@ -88,7 +88,7 @@ public class Config {
 	@Override
 	public String toString() {
 		return "Config [browser=" + browser + ", domConfigurator="
-				+ domConfigurator + ", baseUrl=" + baseUrl + "]";
+				+ domConfigurator + ", baseUrl=" + baseUrl + "]\n";
 	}
 
 }

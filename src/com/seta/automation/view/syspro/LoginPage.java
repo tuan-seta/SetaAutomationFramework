@@ -5,23 +5,25 @@ import com.seta.automation.view.BaseView;
 
 public class LoginPage extends BaseView{
 
+	private static String btnLogin = "buttonLogin";
+	
 	@Override
 	public String getConfigFilePath() {
-		return Constant.PROPERTIES_LOGIN_PAGE;
+		return Constant.CPAGE_LOGIN;
 	}
 
 	@Override
 	public String getDefaultURL() {
-		return Constant.LOGIN_URL;
+		return Constant.URL_LOGIN;
 	}
 
 	public DashboardPage submitLogin() throws Exception{
-		click("buttonLogin");
+		click(btnLogin);
 		return (DashboardPage) BaseView.getView(DashboardPage.class);
 	}
 	
 	public LoginPage submitLoginExpectingFailure() throws Exception{
-		click("buttonLogin");
+		click(btnLogin);
 		return this;
 	}
 }

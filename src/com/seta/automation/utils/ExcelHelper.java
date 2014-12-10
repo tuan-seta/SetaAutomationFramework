@@ -37,15 +37,17 @@ public class ExcelHelper {
 			ExcelFile.close();
 		}catch (FileNotFoundException e) {
 			String message = "Load data file error, file name: " + fPath + "cause: FileNotFoundException";
-			Log.error("Load data file error, file name: " + fPath + "cause: IOException");
+			Log.error(message);
 			throw new FileNotFoundException(message);
 			
 		}catch (IOException e) {
 			String message = "Load data file error, file name: " + fPath + "cause: IOException";
+			Log.error(message);
 			throw new IOException(message);
 		}
 		catch (Exception e) {			
 			String message = "Load data file error, file name: " + fPath;
+			Log.error(message);
 			throw new Exception(message);
 		}
 	}
@@ -122,6 +124,13 @@ public class ExcelHelper {
 		return (ArrayList<LoadableData>) testcaseData.values();
 	}
 
+	public LoadableData getFirstCase(){
+		if (testcaseData.size() > 0)
+			return testcaseData.get(2);
+		
+		return null;
+	}
+	
 	@Override
 	public String toString() {
 		StringBuffer result = new StringBuffer("Parse testcase data from \n");

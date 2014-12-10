@@ -1,12 +1,12 @@
 package com.seta.automation.data;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
 
 public abstract class LoadableObject {
 
-	private Map<String, Field> map = new HashMap<String, Field>();
+	private Map<String, Field> map = new LinkedHashMap<String, Field>();
 
 	public boolean containsField(String key){
 		return map.containsKey(key);
@@ -35,7 +35,7 @@ public abstract class LoadableObject {
 
 	@Override
 	public String toString() {
-		StringBuffer result = new StringBuffer("(Name;Type;Value)\n");
+		StringBuffer result = new StringBuffer("(Name; Type; Value)\n");
 		for (String name: map.keySet()){
 			result.append("(" + name);
 			result.append("; " + getType(name));

@@ -5,43 +5,22 @@
 	<listeners>
 		<listener class-name="com.seta.automation.listeners.IReporterListener" />
 	</listeners>
-	<test name="Init configuration" verbose="2">
+	<test name="Init configuration">
 		<classes>
 			<class name="com.seta.automation.config.Config" />
 		</classes>
 	</test>
-	<test name="Open browser" verbose="2">
+	<test name="Open browser">
 		<classes>
 			<class name="com.seta.automation.browser.InitBrowser" />
 		</classes>
 	</test>
-	
-	
-	<!-- 
-	<test name="Tenant Login (load data from excel file)">
-		<parameter name="pathModel" value="data_input//Excel//TenantData.xlsx" />
-		<parameter name="sheetModel" value="TenantData" />
-		<parameter name="keyRow" value="0" />
-		<parameter name="dataRow" value="1" />
-		<parameter name="pathControl" value="data_input//Excel//TenantControl.xlsx" />
-		<parameter name="sheetControl" value="TenantControl" />
-		<parameter name="controlRow" value="1" />
-		<parameter name="submitControl" value="Submit" />
+	<test name="Login with simple account" verbose="2">
 		<classes>
-			<class name="com.seta.automation.script.syspro.TenantLoginScript" />
+			<class name="com.seta.automation.script.syspro.LoginScript" />
 		</classes>
 	</test>
-	
-	 <test name="Tenant Login" verbose="2">
-		<parameter name="pathModel" value="data_input//Xpath//TenantData.xml" />
-		<parameter name="pathControl" value="data_input//Xpath//TenantControl.xml" />
-		<parameter name="submitControl" value="xpath_login_submit" />
-		<classes>
-			<class name="com.seta.automation.script.syspro.TenantXpathLoginScript" />
-		</classes>
-	</test>
-	-->
-	 <test name="Close browser">
+	<test name="Close browser">
 		<classes>
 			<class name="com.seta.automation.browser.CloseBrowser" />
 		</classes>

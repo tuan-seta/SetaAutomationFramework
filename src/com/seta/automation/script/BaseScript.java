@@ -19,29 +19,28 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeTest;
 
+import com.seta.automation.utils.ExcelHelper;
 import com.seta.automation.utils.Log;
 import com.seta.automation.browser.ChromeBrowser;
 import com.seta.automation.browser.FirefoxBrowser;
 import com.seta.automation.config.Config;
-import com.seta.automation.model.BaseModel;
+import com.seta.automation.config.Constant;
+import com.seta.automation.data.LoadableData;
 import com.seta.automation.view.BaseView;
 
 public abstract class BaseScript {
 	
 	private static final int DEFAULT_TIME_OUT = 10;
+	protected static int DELAY_TIME = 1000;
 	
 	protected static WebDriver driver;
 	protected String baseUrl;
-	
-	protected BaseView viewPage;
-	protected BaseModel dataModel;
-	
-	protected static int DELAY_TIME = 1000;
+	private ExcelHelper loader;
 	
 	private LinkedHashMap<String, Object[]> result;
 	private FileOutputStream outSteam;
 	
-	@BeforeTest
+	@BeforeTest (alwaysRun = true)
 	public void beforeTest() throws Exception {
 
 		Config config = Config.getInstance();
@@ -79,6 +78,17 @@ public abstract class BaseScript {
 		return this;
 	}
 	
+	public LoadableData getSingleTestcase(String fPath, String sheetName) throws Exception{
+		loader = new ExcelHelper(Constant.FDATA_DEFAULT_FOLDER + fPath, sheetName);
+		Log.info(this.getClass().getName() + " load a testcase : " + loader.getFirstCase().toString());
+		return loader.getFirstCase();
+	}
+	
+	public Object getView(Class<?> view) throws Exception {
+		
+		return BaseView.getView(view);
+	}
+
 	@BeforeMethod
     public void handleBeginMethodName(Method method)
     {
@@ -100,10 +110,10 @@ public abstract class BaseScript {
         } else {
         	status = "FAILURE";
         }
-        if (result.size() == 0) {
-        	result.put("0", new Object[]{"Test Case Name", "Description", "Result"});
-        } 
-        result.put(testName, new Object[]{testName, description, status});
+//        if (result.size() == 0) {
+//        	result.put("0", new Object[]{"Test Case Name", "Description", "Result"});
+//        } 
+//        result.put(testName, new Object[]{testName, description, status});
     }
 	
 	public void exportTestResult(HashMap<String, Object[]> result, String sheetName) {
