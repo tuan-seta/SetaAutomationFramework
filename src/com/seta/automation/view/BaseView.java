@@ -10,6 +10,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -19,6 +20,7 @@ import com.seta.automation.browser.InitBrowser;
 import com.seta.automation.config.Constant;
 import com.seta.automation.data.LoadableControl;
 import com.seta.automation.data.LoadableData;
+import com.seta.automation.data.LoadableObject;
 
 public abstract class BaseView {
 
@@ -76,13 +78,31 @@ public abstract class BaseView {
 		return viewObject;
 	}
 	
+	public boolean isValidURL() {
+		ExpectedCondition<Boolean> e = new ExpectedCondition<Boolean>() {
+			public Boolean apply(WebDriver d) {
+				
+				return (driver.getCurrentUrl().contains(getDefaultURL()));
+			}
+		};
+
+		driverWait.until(e);
+		String currentUrl = driver.getCurrentUrl();
+		boolean contains = driver.getCurrentUrl().contains(getDefaultURL());
+
+		Log.info(getClass().getSimpleName() + ": check valid url: "
+				+ currentUrl + ", expected: " + getDefaultURL() + " ==> "
+				+ (contains ? "OK" : "NOT VALID"));
+
+		return contains;
+	}
+	
 	public void populateData(Object testcaseData, boolean clearBeforeSet) throws Exception{
-		if (!(testcaseData instanceof LoadableData)){
-			Log.debug("Load url: ");
-			return;
-		}
-		
-		populateData((LoadableData) testcaseData, clearBeforeSet);
+		if ((testcaseData instanceof LoadableData)){
+			LoadableObject testcase = (LoadableObject) testcaseData;
+			populateData(testcase, clearBeforeSet);
+		} else
+			Log.debug("Can't cast testcase from data provider");
 	}
 	
 	public void populateData(LoadableData testcaseData, boolean clearBeforeSet) throws Exception{
@@ -126,42 +146,6 @@ public abstract class BaseView {
 			Log.info(getClass().getSimpleName()	+ ": populateData() - Check radio button < " + controlFields.getValue(fieldName) + " >");
 		}
 	}
-
-	
-	//Get locator by control ID 
-	private By getLocator(String strElement, Object...args) throws Exception {
-		
-		// extract the locator type and value from control data field
-		String locatorType = controlFields.getType(strElement);
-		String locatorValue = controlFields.getValue(strElement);
-		locatorValue = String.format(locatorValue, args);
-		
-		// return a instance of the By class based on the type of the locator
-		// this By can be used by the browser object in the actual test
-		if (locatorType.toLowerCase().equals(LoadableControl.CTAG_ID))
-			return By.id(locatorValue);
-		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_NAME))
-			return By.name(locatorValue);
-		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_CLASSNAME))
-				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_CLASS)))
-			return By.className(locatorValue);
-		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_TAG))
-				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_TAGNAME)))
-			return By.className(locatorValue);
-		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_LINK))
-				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_LINKTEXT)))
-			return By.linkText(locatorValue);
-		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_PARTIALlINKTEXT))
-			return By.partialLinkText(locatorValue);
-		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_CSS))
-				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_CSSSELECTOR)))
-			return By.cssSelector(locatorValue);
-		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_XPATH))
-			return By.xpath(locatorValue);
-		else
-			throw new Exception("Unknown locator type '" + locatorType + "'");
-	}
-	
 	
 	public void click(String element, Object... args) throws Exception {
 		Log.info(getClass().getSimpleName() + ".click(): " + element);
@@ -172,7 +156,6 @@ public abstract class BaseView {
 		Log.info(getClass().getSimpleName() + ": click on " + element);
 		getElement(element).click();
 	}
-	
 	
 	public WebElement scrollTo(String elementName) throws Exception {
 		Log.info(getClass().getSimpleName() + ": scrollTo " + elementName);
@@ -226,7 +209,6 @@ public abstract class BaseView {
 		By locator = getLocator(name, args);
 		return tryFindElement(name, locator);
 	}
-	
 
 	private WebElement getElement(String name) throws Exception {
 
@@ -235,6 +217,40 @@ public abstract class BaseView {
 		return tryFindElement(name, locator);
 	}
 	
+	//Get locator by control ID 
+	private By getLocator(String strElement, Object...args) throws Exception {
+		
+		// extract the locator type and value from control data field
+		String locatorType = controlFields.getType(strElement);
+		String locatorValue = controlFields.getValue(strElement);
+		locatorValue = String.format(locatorValue, args);
+		
+		// return a instance of the By class based on the type of the locator
+		// this By can be used by the browser object in the actual test
+		if (locatorType.toLowerCase().equals(LoadableControl.CTAG_ID))
+			return By.id(locatorValue);
+		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_NAME))
+			return By.name(locatorValue);
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_CLASSNAME))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_CLASS)))
+			return By.className(locatorValue);
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_TAG))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_TAGNAME)))
+			return By.className(locatorValue);
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_LINK))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_LINKTEXT)))
+			return By.linkText(locatorValue);
+		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_PARTIALlINKTEXT))
+			return By.partialLinkText(locatorValue);
+		else if ((locatorType.toLowerCase().equals(LoadableControl.CTAG_CSS))
+				|| (locatorType.toLowerCase().equals(LoadableControl.CTAG_CSSSELECTOR)))
+			return By.cssSelector(locatorValue);
+		else if (locatorType.toLowerCase().equals(LoadableControl.CTAG_XPATH))
+			return By.xpath(locatorValue);
+		else
+			throw new Exception("Unknown locator type '" + locatorType + "'");
+	}
+		
 	private WebElement tryFindElement(String name, By locator) throws Exception {
 		try {
 			Thread.sleep(DELAY_ACTION);

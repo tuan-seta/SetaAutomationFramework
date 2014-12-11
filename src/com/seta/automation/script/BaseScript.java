@@ -5,6 +5,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Method;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.LinkedHashMap;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
@@ -82,6 +83,12 @@ public abstract class BaseScript {
 		loader = new ExcelHelper(Constant.FDATA_DEFAULT_FOLDER + fPath, sheetName);
 		Log.info(this.getClass().getName() + " load a testcase : " + loader.getFirstCase().toString());
 		return loader.getFirstCase();
+	}
+	
+	public Iterator<Object> getDataProvider(String fPath, String sheetName) throws Exception {
+		loader = new ExcelHelper(Constant.FDATA_DEFAULT_FOLDER + fPath, sheetName);
+		Log.info(this.getClass().getName() + " load the set of testcase ");
+		return loader.getDataProvider();
 	}
 	
 	public Object getView(Class<?> view) throws Exception {

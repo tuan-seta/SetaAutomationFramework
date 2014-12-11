@@ -5,7 +5,9 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 
+import org.apache.http.util.TextUtils;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.ss.usermodel.Sheet;
@@ -112,6 +114,10 @@ public class ExcelHelper {
 					fieldType = cell.getStringCellValue();
 				} else if (col < count + 2){
 					fieldValue = cell.getStringCellValue();
+					if (!TextUtils.isEmpty(fieldType) && fieldType.contains(LoadableData.DTAG_UNIQUE)) {
+						fieldValue = fieldValue + Utils.today();
+					}
+					
 					//get record corresponding to column index
 					LoadableData testcase = testcaseData.get(col);
 					testcase.put(fieldName, fieldType, fieldValue);
@@ -120,8 +126,14 @@ public class ExcelHelper {
 		}
 	}
 	
-	public ArrayList<LoadableData> getDataProvider(){
-		return (ArrayList<LoadableData>) testcaseData.values();
+	public Iterator<Object> getDataProvider(){
+		ArrayList<Object> result = new ArrayList<Object>();
+		for(int i: testcaseData.keySet()){
+			LoadableData testcase = testcaseData.get(i);
+			result.add((Object) testcase);
+		}
+		Log.info(this.getClass().getName() + " cast all loaded testcase to Object");
+		return result.iterator();
 	}
 
 	public LoadableData getFirstCase(){

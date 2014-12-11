@@ -62,6 +62,14 @@ public class Utils {
 		}
 	}
 	
+	public static String today() {
+		String currentDateTime = "";
+		SimpleDateFormat DtFormat = new SimpleDateFormat("dd_MM_yyyy_hh_mm_ss_SSS");
+		Date date = new Date();
+		currentDateTime = DtFormat.format(date).toString();
+		return currentDateTime;
+	}
+	
 	/**
 	 * For get time
 	 */
