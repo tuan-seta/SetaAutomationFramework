@@ -1,5 +1,5 @@
 
-REPORT TEST - Date:Wed Dec 03 17:33:14 ICT 2014
+REPORT TEST - Date:Thu Dec 11 17:21:30 ICT 2014
 ***********************
 Test Name:Init configuration
 Passed :0
@@ -11,12 +11,17 @@ Passed :0
 Failed :0
 Skipped:0
 ***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
 Test Name:Close browser
 Passed :0
 Failed :0
 Skipped:0
 ***********************
-TOTAL TEST CASE : 0
+TOTAL TEST CASE : 1
 TotalTestCasePassed : 0
-TotalTestCaseFailed : 0
+TotalTestCaseFailed : 1
 TotalTestCaseSkipped : 0

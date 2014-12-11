@@ -245,3 +245,1021 @@ TotalTestCasePassed : 0
 TotalTestCaseFailed : 0
 TotalTestCaseSkipped : 0 
 2014-12-03 17:33:14,500 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 15:44:01,953 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 15:44:01,968 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 15:44:06,984 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 15:44:06,984 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 15:44:06,984 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 15:44:07,031 ERROR [Log] Load properties file error, file name: login.properties, cause: FileNotFoundException  
+2014-12-10 15:44:07,031 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 15:44:07,031 INFO  [Log] X 
+2014-12-10 15:44:07,031 INFO  [Log] X 
+2014-12-10 15:44:07,031 INFO  [Log] X 
+2014-12-10 15:44:07,031 INFO  [Log] X 
+2014-12-10 15:44:07,500 INFO  [Log] AfterSuite 
+2014-12-10 15:44:17,796 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 15:44:17 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 15:44:17,796 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 15:49:07,031 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 15:49:07,031 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 15:49:09,031 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 15:49:09,031 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 15:49:09,031 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 15:49:09,046 ERROR [Log] Load properties file error, file name: login.propertieslogin.properties, cause: FileNotFoundException  
+2014-12-10 15:49:09,046 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 15:49:09,046 INFO  [Log] X 
+2014-12-10 15:49:09,046 INFO  [Log] X 
+2014-12-10 15:49:09,046 INFO  [Log] X 
+2014-12-10 15:49:09,046 INFO  [Log] X 
+2014-12-10 15:49:09,062 INFO  [Log] AfterSuite 
+2014-12-10 15:49:21,109 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 15:49:21 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 15:49:21,109 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 15:55:10,281 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 15:55:10,312 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 15:55:12,187 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 15:55:12,187 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 15:55:12,187 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 15:55:12,218 ERROR [Log] Load data file error, file name: LoginData.xlsxcause: IOException 
+2014-12-10 15:55:12,218 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 15:55:12,218 INFO  [Log] X 
+2014-12-10 15:55:12,218 INFO  [Log] X 
+2014-12-10 15:55:12,218 INFO  [Log] X 
+2014-12-10 15:55:12,218 INFO  [Log] X 
+2014-12-10 15:55:12,531 INFO  [Log] AfterSuite 
+2014-12-10 15:55:22,828 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 15:55:22 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 15:55:22,828 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 15:57:32,125 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 15:57:32,125 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 15:57:35,625 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 15:57:35,625 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 15:57:35,625 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 15:57:37,703 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 15:57:37,703 INFO  [Log] X 
+2014-12-10 15:57:37,703 INFO  [Log] X 
+2014-12-10 15:57:37,703 INFO  [Log] X 
+2014-12-10 15:57:37,703 INFO  [Log] X 
+2014-12-10 15:57:37,718 INFO  [Log] AfterSuite 
+2014-12-10 15:57:49,937 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 15:57:49 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 15:57:49,937 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:01:08,140 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:01:08,984 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:01:11,984 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:01:11,984 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:01:11,984 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:01:12,765 INFO  [Log] LoginPage: click on buttonLogin 
+2014-12-10 16:01:13,984 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:01:13,984 INFO  [Log] X 
+2014-12-10 16:01:13,984 INFO  [Log] X 
+2014-12-10 16:01:13,984 INFO  [Log] X 
+2014-12-10 16:01:13,984 INFO  [Log] X 
+2014-12-10 16:01:14,000 INFO  [Log] AfterSuite 
+2014-12-10 16:01:24,296 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:01:24 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :1
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 1
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-10 16:01:24,296 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:04:59,656 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:05:00,531 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:05:01,859 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:05:01,859 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:05:01,859 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:05:02,625 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:05:02,625 INFO  [Log] X 
+2014-12-10 16:05:02,625 INFO  [Log] X 
+2014-12-10 16:05:02,625 INFO  [Log] X 
+2014-12-10 16:05:02,625 INFO  [Log] X 
+2014-12-10 16:05:02,656 INFO  [Log] AfterSuite 
+2014-12-10 16:05:14,359 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:05:14 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 16:05:14,359 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:05:51,750 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:05:52,953 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:05:54,375 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:05:54,375 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:05:54,375 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:05:55,171 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:05:55,171 INFO  [Log] X 
+2014-12-10 16:05:55,171 INFO  [Log] X 
+2014-12-10 16:05:55,171 INFO  [Log] X 
+2014-12-10 16:05:55,171 INFO  [Log] X 
+2014-12-10 16:05:55,187 INFO  [Log] AfterSuite 
+2014-12-10 16:06:05,718 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:06:05 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 16:06:05,718 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:06:25,734 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:06:25,765 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:06:27,234 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:06:27,234 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:06:27,234 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:06:28,015 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:06:28,015 INFO  [Log] X 
+2014-12-10 16:06:28,015 INFO  [Log] X 
+2014-12-10 16:06:28,015 INFO  [Log] X 
+2014-12-10 16:06:28,015 INFO  [Log] X 
+2014-12-10 16:06:28,031 INFO  [Log] AfterSuite 
+2014-12-10 16:06:38,359 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:06:38 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 16:06:38,359 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:09:15,968 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:09:15,984 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:09:18,156 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:09:18,156 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:09:18,156 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:09:18,953 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:09:18,953 INFO  [Log] X 
+2014-12-10 16:09:18,953 INFO  [Log] X 
+2014-12-10 16:09:18,953 INFO  [Log] X 
+2014-12-10 16:09:18,953 INFO  [Log] X 
+2014-12-10 16:09:19,015 INFO  [Log] AfterSuite 
+2014-12-10 16:09:29,328 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:09:29 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 16:09:29,328 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:12:42,281 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:12:42,406 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:12:46,296 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:12:46,296 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:12:46,296 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:12:47,421 INFO  [Log] com.seta.automation.script.syspro.LoginScript load a testcase : (Name;Type;Value)
+(Password_Error_Message; Validator; )
+(Email_Error_Message; Validator; )
+(Email; Input; thuyk8hy@gmail.com)
+(CompanyCode; Input; thuytt)
+(Password; Input; 123456)
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-10 16:12:47,421 INFO  [Log] LoginPage: scrollTo thuyk8hy@gmail.com 
+2014-12-10 16:12:47,437 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:12:47,437 INFO  [Log] X 
+2014-12-10 16:12:47,437 INFO  [Log] X 
+2014-12-10 16:12:47,437 INFO  [Log] X 
+2014-12-10 16:12:47,437 INFO  [Log] X 
+2014-12-10 16:12:47,562 INFO  [Log] AfterSuite 
+2014-12-10 16:12:57,859 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:12:57 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 16:12:57,859 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:21:38,062 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:21:38,078 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:21:40,078 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:21:40,078 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:21:40,078 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:21:40,875 INFO  [Log] com.seta.automation.script.syspro.LoginScript load a testcase : (Name;Type;Value)
+(Password_Error_Message; Validator; )
+(Email_Error_Message; Validator; )
+(Email; Input; thuyk8hy@gmail.com)
+(CompanyCode; Input; thuytt)
+(Password; Input; 123456)
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-10 16:21:40,875 INFO  [Log] LoginPage: scrollTo Email 
+2014-12-10 16:21:43,937 INFO  [Log] LoginPage: populateData() - Set element < Email > - Input to value of < thuyk8hy@gmail.com > 
+2014-12-10 16:21:43,937 INFO  [Log] LoginPage: scrollTo CompanyCode 
+2014-12-10 16:21:46,218 INFO  [Log] LoginPage: populateData() - Set element < CompanyCode > - Input to value of < thuytt > 
+2014-12-10 16:21:46,218 INFO  [Log] LoginPage: scrollTo Password 
+2014-12-10 16:21:48,421 INFO  [Log] LoginPage: populateData() - Set element < Password > - Input to value of < 123456 > 
+2014-12-10 16:21:48,421 INFO  [Log] LoginPage: click on buttonLogin 
+2014-12-10 16:21:49,562 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:21:49,562 INFO  [Log] X 
+2014-12-10 16:21:49,562 INFO  [Log] X 
+2014-12-10 16:21:49,562 INFO  [Log] X 
+2014-12-10 16:21:49,562 INFO  [Log] X 
+2014-12-10 16:21:49,750 INFO  [Log] AfterSuite 
+2014-12-10 16:22:00,093 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:22:00 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :1
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 1
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-10 16:22:00,093 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 16:47:00,109 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 16:47:00,156 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 16:47:03,453 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 16:47:03,453 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 16:47:03,453 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 16:47:04,296 INFO  [Log] com.seta.automation.script.syspro.LoginScript load a testcase : (Name;Type;Value)
+(Password_Error_Message; Validator; )
+(Email_Error_Message; Validator; )
+(Email; Input; thuyk8hy@gmail.com)
+(CompanyCode; Input; thuytt)
+(Password; Input; 123456)
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-10 16:47:04,296 INFO  [Log] LoginPage: scrollTo Email 
+2014-12-10 16:47:07,390 INFO  [Log] LoginPage: populateData() - Set element < Email > - Input to value of < thuyk8hy@gmail.com > 
+2014-12-10 16:47:07,390 INFO  [Log] LoginPage: scrollTo CompanyCode 
+2014-12-10 16:47:09,640 INFO  [Log] LoginPage: populateData() - Set element < CompanyCode > - Input to value of < thuytt > 
+2014-12-10 16:47:09,640 INFO  [Log] LoginPage: scrollTo Password 
+2014-12-10 16:47:11,875 INFO  [Log] LoginPage: populateData() - Set element < Password > - Input to value of < 123456 > 
+2014-12-10 16:47:11,875 INFO  [Log] LoginPage: click on buttonLogin 
+2014-12-10 16:47:13,015 ERROR [Log] Load properties file error, file name: input/control/dashboard.properties, cause: FileNotFoundException  
+2014-12-10 16:47:13,015 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 16:47:13,015 INFO  [Log] X 
+2014-12-10 16:47:13,015 INFO  [Log] X 
+2014-12-10 16:47:13,015 INFO  [Log] X 
+2014-12-10 16:47:13,015 INFO  [Log] X 
+2014-12-10 16:47:13,046 INFO  [Log] AfterSuite 
+2014-12-10 16:47:23,375 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 16:47:23 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 16:47:23,375 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 17:17:13,000 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 17:17:13,000 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 17:17:15,031 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 17:17:15,031 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 17:17:15,031 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 17:17:15,781 INFO  [Log] com.seta.automation.script.syspro.LoginScript load a testcase : (Name;Type;Value)
+(Password_Error_Message; Validator; )
+(Email_Error_Message; Validator; )
+(Email; Input; thuyk8hy@gmail.com)
+(CompanyCode; Input; thuytt)
+(Password; Input; 123456)
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-10 17:17:15,781 INFO  [Log] LoginPage: scrollTo Email 
+2014-12-10 17:17:18,812 INFO  [Log] LoginPage: populateData() - Set element < Email > - Input to value of < thuyk8hy@gmail.com > 
+2014-12-10 17:17:18,812 INFO  [Log] LoginPage: scrollTo CompanyCode 
+2014-12-10 17:17:21,000 INFO  [Log] LoginPage: populateData() - Set element < CompanyCode > - Input to value of < thuytt > 
+2014-12-10 17:17:21,000 INFO  [Log] LoginPage: scrollTo Password 
+2014-12-10 17:17:23,218 INFO  [Log] LoginPage: populateData() - Set element < Password > - Input to value of < 123456 > 
+2014-12-10 17:17:23,218 INFO  [Log] LoginPage: click on buttonLogin 
+2014-12-10 17:17:26,421 INFO  [Log] DashboardPage: move to  linkAccount 
+2014-12-10 17:17:26,421 INFO  [Log] DashboardPage: click on linkLogOut 
+2014-12-10 17:17:28,562 ERROR [Log] Error find element name: linkLogOut by: By.xpath: .//*[@id='linkAccountSetting']/div/div[2]/ul/li[3]/a/span class: DashboardPage 
+2014-12-10 17:17:28,578 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 17:17:28,578 INFO  [Log] X 
+2014-12-10 17:17:28,578 INFO  [Log] X 
+2014-12-10 17:17:28,578 INFO  [Log] X 
+2014-12-10 17:17:28,578 INFO  [Log] X 
+2014-12-10 17:17:28,625 INFO  [Log] AfterSuite 
+2014-12-10 17:17:38,937 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 17:17:38 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-10 17:17:38,937 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-10 17:54:35,750 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-10 17:54:35,765 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-10 17:54:37,453 INFO  [Log] ----------------------BENGIN TEST CASE----------------------- 
+2014-12-10 17:54:37,453 INFO  [Log] |                     LOGIN_001 (loginSuccess) 
+2014-12-10 17:54:37,453 INFO  [Log] ------------------------------------------------------------- 
+2014-12-10 17:54:38,265 INFO  [Log] com.seta.automation.script.syspro.LoginScript load a testcase : (Name; Type; Value)
+(Email; Input; thuyk8hy@gmail.com)
+(Password; Input; 123456)
+(CompanyCode; Input; thuytt)
+(Email_Error_Message; Validator; )
+(Password_Error_Message; Validator; )
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-10 17:54:38,265 INFO  [Log] LoginPage: scrollTo Email 
+2014-12-10 17:54:41,281 INFO  [Log] LoginPage: populateData() - Set element < Email > - Input to value of < thuyk8hy@gmail.com > 
+2014-12-10 17:54:41,281 INFO  [Log] LoginPage: scrollTo Password 
+2014-12-10 17:54:43,500 INFO  [Log] LoginPage: populateData() - Set element < Password > - Input to value of < 123456 > 
+2014-12-10 17:54:43,500 INFO  [Log] LoginPage: scrollTo CompanyCode 
+2014-12-10 17:54:45,750 INFO  [Log] LoginPage: populateData() - Set element < CompanyCode > - Input to value of < thuytt > 
+2014-12-10 17:54:45,750 INFO  [Log] LoginPage: click on buttonLogin 
+2014-12-10 17:54:48,968 INFO  [Log] DashboardPage: move to  linkAccount 
+2014-12-10 17:54:48,968 INFO  [Log] DashboardPage: click on linkLogOut 
+2014-12-10 17:54:50,531 INFO  [Log] XXXXXXXXXXXXXXXXXXXXXXX             -E---N---D-             XXXXXXXXXXXXXXXXXXXXXX 
+2014-12-10 17:54:50,531 INFO  [Log] X 
+2014-12-10 17:54:50,531 INFO  [Log] X 
+2014-12-10 17:54:50,531 INFO  [Log] X 
+2014-12-10 17:54:50,531 INFO  [Log] X 
+2014-12-10 17:54:51,000 INFO  [Log] AfterSuite 
+2014-12-10 17:55:01,390 INFO  [Log] Report: 
+REPORT TEST - Date:Wed Dec 10 17:55:01 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :1
+Failed :0
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 1
+TotalTestCaseFailed : 0
+TotalTestCaseSkipped : 0 
+2014-12-10 17:55:01,390 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 15:35:36,546 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 15:35:36,640 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 15:35:39,578 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase : (Name; Type; Value)
+(Email; Input; thuyk8hy@gmail.com)
+(Password; Input; 123456)
+(CompanyCode; Input; thuytt)
+(Email_Error_Message; Validator; )
+(Password_Error_Message; Validator; )
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-11 15:35:39,609 INFO  [Log] AfterSuite 
+2014-12-11 15:35:51,828 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 15:35:51 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 15:35:51,828 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 15:44:19,390 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 15:44:19,937 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 15:44:23,140 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase : (Name; Type; Value)
+(Email; Input; thuyk8hy@gmail.com)
+(Password; Input; 123456)
+(CompanyCode; Input; thuytt)
+(Email_Error_Message; Validator; )
+(Password_Error_Message; Validator; )
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-11 15:44:23,156 INFO  [Log] AfterSuite 
+2014-12-11 15:44:34,484 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 15:44:34 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 15:44:34,484 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 15:46:44,468 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 15:46:44,468 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 15:46:48,468 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase : (Name; Type; Value)
+(Email; Input; thuyk8hy@gmail.com)
+(Password; Input; 123456)
+(CompanyCode; Input; thuytt)
+(Email_Error_Message; Validator; )
+(Password_Error_Message; Validator; )
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-11 15:46:48,484 INFO  [Log] AfterSuite 
+2014-12-11 15:46:59,046 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 15:46:59 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 15:46:59,046 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 16:09:54,468 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 16:09:54,515 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 16:09:59,656 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase : (Name; Type; Value)
+(Email; Input; thuyk8hy@gmail.com)
+(Password; Input; 123456)
+(CompanyCode; Input; thuytt)
+(Email_Error_Message; Validator; )
+(Password_Error_Message; Validator; )
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-11 16:09:59,937 INFO  [Log] AfterSuite 
+2014-12-11 16:10:10,453 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 16:10:10 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 16:10:10,453 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 16:43:16,046 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 16:43:17,078 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 16:43:20,328 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase : (Name; Type; Value)
+(Email; Input; thuyk8hy@gmail.com)
+(Password; Input; 123456)
+(CompanyCode; Input; thuytt)
+(Email_Error_Message; Validator; )
+(Password_Error_Message; Validator; )
+(CompanyCode_Error_Message; Validator; )
+ 
+2014-12-11 16:43:20,328 INFO  [Log] AfterSuite 
+2014-12-11 16:43:31,062 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 16:43:31 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 16:43:31,062 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 17:00:26,453 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 17:00:26,468 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 17:00:30,421 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase : java.util.ArrayList$Itr@a45ac2 
+2014-12-11 17:00:30,515 INFO  [Log] AfterSuite 
+2014-12-11 17:00:41,046 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 17:00:41 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 17:00:41,046 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 17:01:12,062 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 17:01:12,078 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 17:01:16,421 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase  
+2014-12-11 17:01:16,437 INFO  [Log] AfterSuite 
+2014-12-11 17:01:30,140 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 17:01:30 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 17:01:30,140 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 17:04:57,796 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 17:04:57,796 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 17:05:01,437 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase  
+2014-12-11 17:05:01,437 INFO  [Log] com.seta.automation.utils.ExcelHelper cast all loaded testcase to Object 
+2014-12-11 17:05:01,531 INFO  [Log] AfterSuite 
+2014-12-11 17:05:12,343 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 17:05:12 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 17:05:12,343 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 17:07:46,953 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 17:07:47,000 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 17:07:50,781 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase  
+2014-12-11 17:07:50,781 INFO  [Log] com.seta.automation.utils.ExcelHelper cast all loaded testcase to Object 
+2014-12-11 17:07:51,015 INFO  [Log] AfterSuite 
+2014-12-11 17:08:04,812 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 17:08:04 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 17:08:04,812 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 17:08:43,953 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 17:08:44,046 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 17:08:46,656 INFO  [Log] com.seta.automation.script.syspro.LoginScript start to cast testcase data  
+2014-12-11 17:08:47,468 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase  
+2014-12-11 17:08:47,468 INFO  [Log] com.seta.automation.utils.ExcelHelper cast all loaded testcase to Object 
+2014-12-11 17:08:47,515 INFO  [Log] AfterSuite 
+2014-12-11 17:08:58,015 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 17:08:58 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 17:08:58,015 INFO  [Log] pathFile = data_output\report_file.txt 
+2014-12-11 17:21:16,484 INFO  [Log] com.seta.automation.script.syspro.LoginScript: Before Test 
+2014-12-11 17:21:16,484 INFO  [Log] Load url: http://192.168.80.122:8005/ 
+2014-12-11 17:21:18,531 INFO  [Log] com.seta.automation.script.syspro.LoginScript start to cast testcase data  
+2014-12-11 17:21:19,218 INFO  [Log] com.seta.automation.script.syspro.LoginScript load the set of testcase  
+2014-12-11 17:21:19,218 INFO  [Log] com.seta.automation.utils.ExcelHelper cast all loaded testcase to Object 
+2014-12-11 17:21:19,250 INFO  [Log] AfterSuite 
+2014-12-11 17:21:30,156 INFO  [Log] Report: 
+REPORT TEST - Date:Thu Dec 11 17:21:30 ICT 2014
+***********************
+Test Name:Init configuration
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Open browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+Test Name:Login with simple account
+Passed :0
+Failed :1
+Skipped:0
+***********************
+Test Name:Close browser
+Passed :0
+Failed :0
+Skipped:0
+***********************
+TOTAL TEST CASE : 1
+TotalTestCasePassed : 0
+TotalTestCaseFailed : 1
+TotalTestCaseSkipped : 0 
+2014-12-11 17:21:30,156 INFO  [Log] pathFile = data_output\report_file.txt 
