@@ -1,5 +1,6 @@
 package com.seta.automation.script.syspro;
 
+import java.util.ArrayList;
 import java.util.Iterator;
 
 import org.testng.Assert;
@@ -43,10 +44,9 @@ public class LoginScript extends BaseScript {
 	
 	@Test(priority = 0, description = "Login", testName = "LOGIN_002", dataProvider = "dataProviderLogin" )
 	public void loginMultiTime(Object testcase) throws Exception {
-				
+		Log.info(this.getClass().getName() + " start to populate data ");		
 		LoginPage loginPage = (LoginPage) getView(LoginPage.class);
-		Log.info(this.getClass().getName() + " start to populate data ");
-//		LoadableData castedAccount = (LoadableData) testcase;
+		
 		loginPage.populateData(testcase, false);
 		
 		DashboardPage dashboardPage = loginPage.submitLogin();

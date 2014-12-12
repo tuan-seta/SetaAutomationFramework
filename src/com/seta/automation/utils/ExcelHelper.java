@@ -130,9 +130,8 @@ public class ExcelHelper {
 		ArrayList<Object> result = new ArrayList<Object>();
 		for(int i: testcaseData.keySet()){
 			LoadableData testcase = testcaseData.get(i);
-			result.add((Object) testcase);
+			result.add(new Object[] {testcase});
 		}
-		Log.info(this.getClass().getName() + " cast all loaded testcase to Object");
 		return result.iterator();
 	}
 

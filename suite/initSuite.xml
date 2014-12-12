@@ -15,7 +15,7 @@
 			<class name="com.seta.automation.browser.InitBrowser" />
 		</classes>
 	</test>
-	<test name="Login with simple account" verbose="1">
+	<test name="Login multi time with an account" verbose="2">
 		<classes>
 			<class name="com.seta.automation.script.syspro.LoginScript" />
 		</classes>

@@ -1,7 +1,9 @@
 package com.seta.automation.view;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Iterator;
+import java.util.List;
 
 import org.apache.http.util.TextUtils;
 import org.openqa.selenium.By;
@@ -99,10 +101,26 @@ public abstract class BaseView {
 	
 	public void populateData(Object testcaseData, boolean clearBeforeSet) throws Exception{
 		if ((testcaseData instanceof LoadableData)){
-			LoadableObject testcase = (LoadableObject) testcaseData;
+			Log.info("Get an instance of LoadableData");
+			LoadableData testcase = (LoadableData) testcaseData;
 			populateData(testcase, clearBeforeSet);
 		} else
 			Log.debug("Can't cast testcase from data provider");
+	}
+	
+	@SuppressWarnings("unchecked")
+	private LoadableData castData(Object data) {
+		LoadableData testcase = new LoadableData();
+		if (data == null) {
+			throw new NullPointerException(getClass().getSimpleName()
+					+ " data is NULL");
+		}
+		
+		if (data instanceof Iterator<?>) {
+			Iterator<Object[]> castedData = (Iterator<Object[]>) data;
+			testcase = (LoadableData) castedData.next()[0];
+		}
+		return testcase;
 	}
 	
 	public void populateData(LoadableData testcaseData, boolean clearBeforeSet) throws Exception{

@@ -1,5 +1,6 @@
 package com.seta.automation.data;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Set;
@@ -32,7 +33,7 @@ public abstract class LoadableObject {
 	public void clear(){
 		map.clear();
 	}
-
+	
 	@Override
 	public String toString() {
 		StringBuffer result = new StringBuffer("(Name; Type; Value)\n");

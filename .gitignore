@@ -15,3 +15,76 @@ hs_err_pid*
 /data_output
 /testng_output
 /testng_output
+/test-output
+/test-output/bullet_point.png
+/test-output/collapseall.gif
+/test-output/emailable-report.html
+/test-output/failed.png
+/test-output/index.html
+/test-output/Init web browser
+/test-output/jquery-1.7.1.min.js
+/test-output/junitreports
+/test-output/navigator-bullet.png
+/test-output/old
+/test-output/passed.png
+/test-output/skipped.png
+/test-output/testng-failed.xml
+/test-output/testng-reports.css
+/test-output/testng-reports.js
+/test-output/testng-results.xml
+/test-output/testng.css
+/test-output/Init web browser/Close browser.html
+/test-output/Init web browser/Close browser.xml
+/test-output/Init web browser/Init configuration.html
+/test-output/Init web browser/Init configuration.xml
+/test-output/Init web browser/Login with simple account.html
+/test-output/Init web browser/Login with simple account.xml
+/test-output/Init web browser/Open browser.html
+/test-output/Init web browser/Open browser.xml
+/test-output/Init web browser/testng-failed.xml
+/test-output/old/Init web browser/classes.html
+/test-output/old/Init web browser/Close browser.properties
+/test-output/old/Init web browser/groups.html
+/test-output/old/Init web browser/index.html
+/test-output/old/Init web browser/Init configuration.properties
+/test-output/old/Init web browser/Login with simple account.properties
+/test-output/old/Init web browser/main.html
+/test-output/old/Init web browser/methods-alphabetical.html
+/test-output/old/Init web browser/methods-not-run.html
+/test-output/old/Init web browser/methods.html
+/test-output/old/Init web browser/Open browser.properties
+/test-output/old/Init web browser/reporter-output.html
+/test-output/old/Init web browser/testng.xml.html
+/test-output/old/Init web browser/toc.html
+/testng_output/Init web browser
+/testng_output/Init web browser/Close browser.html
+/testng_output/Init web browser/Close browser.xml
+/testng_output/Init web browser/Init configuration.html
+/testng_output/Init web browser/Init configuration.xml
+/testng_output/Init web browser/Login with simple account.html
+/testng_output/Init web browser/Login with simple account.xml
+/testng_output/Init web browser/Open browser.html
+/testng_output/Init web browser/Open browser.xml
+/testng_output/Init web browser/testng-failed.xml
+/testng_output/emailable-report.html
+/testng_output/index.html
+/testng_output/testng-results.xml
+/testng_output/old/Init web browser/classes.html
+/testng_output/old/Init web browser/Close browser.properties
+/testng_output/old/Init web browser/groups.html
+/testng_output/old/Init web browser/index.html
+/testng_output/old/Init web browser/Init configuration.properties
+/testng_output/old/Init web browser/Login with simple account.properties
+/testng_output/old/Init web browser/main.html
+/testng_output/old/Init web browser/methods-alphabetical.html
+/testng_output/old/Init web browser/methods-not-run.html
+/testng_output/old/Init web browser/methods.html
+/testng_output/old/Init web browser/Open browser.properties
+/testng_output/old/Init web browser/reporter-output.html
+/testng_output/old/Init web browser/testng.xml.html
+/testng_output/old/Init web browser/toc.html
+input/data/~$LoginData.xlsx
+data_output/report_file.txt
+data_output/report_file.txt
+logfile.log
+data_output/report_file.txt
