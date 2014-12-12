@@ -80,9 +80,9 @@ public abstract class BaseScript {
 		return this;
 	}
 	
-	public LoadableData getSingleTestcase(String fPath, String sheetName) throws Exception{
+	public LoadableData getDefaultTestcase(String fPath, String sheetName) throws Exception{
 		loader = new ExcelHelper(Constant.FDATA_DEFAULT_FOLDER + fPath, sheetName);
-		Log.info(this.getClass().getName() + " load a testcase : " + loader.getFirstCase().toString());
+		Log.info(this.getClass().getName() + " load a testcase " );
 		return loader.getFirstCase();
 	}
 	
